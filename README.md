@@ -1,2 +1,2 @@
-# adminlte-laravel
-Basic setup of well-known Admin Dashboard with Laravel 5.6
+# Simple Article Manager
+Simple CRUD integration of with Article Manager using Laravel 5.6
