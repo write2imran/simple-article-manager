@@ -2,6 +2,7 @@
 
 return [
 
+    
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -13,7 +14,11 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Reach Upstream'),
+    
+    'app_first_name' => env('APP_FIRST_NAME', 'Reach'),
+    
+    'app_last_name' => env('APP_LAST_NAME', 'Upstream'),
 
     /*
     |--------------------------------------------------------------------------

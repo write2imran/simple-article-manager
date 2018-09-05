@@ -3,13 +3,13 @@
     <!-- Content Header (Page header) -->
     <section class="content-header content-center">
         <h1>
-            Admin LTE | Laravel 5.6
+            @yield('page-heading')
         </h1>
     </section>
 
     <!-- Main content -->
     <section class="content content-center">
-        @yield('content')
+        @yield('content') 
     </section>
     <!-- /.content -->
 </div>

@@ -1,7 +1,7 @@
 <html>
     @include('layouts.site.head')
 
-    <body class="hold-transition skin-blue sidebar-mini fixed">
+    <body class="hold-transition skin-blue-light sidebar-mini fixed">
         <!-- Site wrapper -->
         <div class="wrapper">
             @include('layouts.site.header')
