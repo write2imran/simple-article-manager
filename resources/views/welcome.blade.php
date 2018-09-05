@@ -83,7 +83,7 @@
                 </div>
 
                 <div class="links">
-                    <b>An Article Management System of UPDC (Saudi Aramco)</b>
+                    <b>An Article Management System for UPDC (Saudi Aramco)</b>
                 </div>
             </div>
         </div>
