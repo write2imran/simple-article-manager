@@ -9,6 +9,28 @@ All Categories
     Create New
 </button>
 
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    @foreach($categories as $cat)  
+    <tr>
+      <td>{{$cat->name}}</td>
+      <td>{{$cat->description}}</td>
+      <td>Edit/Delete</td>
+    </tr>
+    @endforeach
+    
+  </tbody>
+</table>
+
+@endsection
 
 <div class="modal fade" id="modal-default" rol="dialog">
     <div class="modal-dialog" role=document">
@@ -57,6 +79,4 @@ All Categories
     <!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
-@endsection
-
 
