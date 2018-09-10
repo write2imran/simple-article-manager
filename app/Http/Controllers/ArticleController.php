@@ -3,18 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Category;
 
-class CategoryController extends Controller {
-
+class ArticleController extends Controller
+{
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() {
-        $categories = Category::all();
-        return view('category.index', compact('categories'));
+    public function index()
+    {
+
+        $articles = \App\Article::all();
+        //dd(compact('articles'));
+        return view('article.index', compact('articles'));
+        
     }
 
     /**
@@ -22,20 +25,22 @@ class CategoryController extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
-    public function create() {
+    public function create()
+    {
         //
     }
 
-    /**
+    /** 
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) {
-        \App\Category::create($request->all());
-
-        return back();
+    public function store(Request $request)
+    {
+        
+        \App\Article::create($request->all());
+        return back();        
     }
 
     /**
@@ -44,8 +49,9 @@ class CategoryController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id) {
-        
+    public function show($id)
+    {
+        //
     }
 
     /**
@@ -54,8 +60,9 @@ class CategoryController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id) {
-
+    public function edit($id)
+    {
+        //
     }
 
     /**
@@ -65,12 +72,13 @@ class CategoryController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request) {
-        $category = Category::findOrFail($request->id);
+    public function update(Request $request)
+    {
+        $article = \App\Article::findOrFail($request->id);
 
-        $category->update($request->all());
+        $article->update($request->all());
 
-        return back();
+        return back();        
     }
 
     /**
@@ -79,8 +87,8 @@ class CategoryController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id) {
+    public function destroy($id)
+    {
         //
     }
-
 }

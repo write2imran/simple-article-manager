@@ -35,7 +35,7 @@
   
   <!-- Optionally, you can add icons to the links -->
   <li class="active"><a href="category"><i class="fa fa-link"></i> <span>Category</span></a></li>
-  
+  <li class="active"><a href="article"><i class="fa fa-link"></i> <span>Article</span></a></li>
   
   
 <!--  <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>

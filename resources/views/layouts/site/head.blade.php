@@ -77,7 +77,7 @@
     <!-- FastClick -->
     <!--<script src="{{ asset('adminlte/bower_components/fastclick/lib/fastclick.js' )}}"></script>-->
     <!-- AdminLTE App -->
-    <!--<script src="{{ asset('adminlte/dist/js/adminlte.min.js' )}}"></script>-->
+    <script src="{{ asset('adminlte/dist/js/adminlte.min.js' )}}"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <!--<script src="{{ asset('adminlte/dist/js/pages/dashboard.js' )}}"></script>-->
     <!-- AdminLTE for demo purposes -->
@@ -87,6 +87,7 @@
         <!--
             var url_search = '{{ url("search/search/search") }}';
         //-->
+        
         <!-- </script>
 
         @stack('js')

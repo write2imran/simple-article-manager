@@ -20,6 +20,7 @@ return [
     
     'app_last_name' => env('APP_LAST_NAME', 'Upstream'),
 
+    'app_host_name' => env('APP_HOST_NAME', 'http://localhost:8000'),
     /*
     |--------------------------------------------------------------------------
     | Application Environment

@@ -25,3 +25,5 @@ Route::get('/admin', function () {
 });
 
 Route::resource('category', 'CategoryController');
+
+Route::resource('article', 'ArticleController');
