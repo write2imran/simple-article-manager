@@ -31,7 +31,8 @@ All Articles
                       data-article-title="{{$article->title}}" data-article-heading="{{$article->heading}}" data-article-id="{{$article->id}}"
                       data-article-detail="{{$article->detail}}" data-article-url="{{ config('app.app_host_name')}}/article"
                       data-toggle="modal" data-target="#modal-edit-article"> Edit</button>
-          <button  id="deleteBtn" class="btn btn-xs btn-danger"> Delete</button></td>
+          <button  id="deleteBtn" class="btn btn-xs btn-danger" data-article-id="{{$article->id}}"
+                   data-toggle="modal" data-target="#modal-delete-article"> Delete</button></td>
             
         </tr>
     @endforeach
@@ -137,6 +138,50 @@ All Articles
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+                    
+            </form>             
+             <!-- / .form -->                    
+
+        </div>
+
+        <!-- /.modal-content -->
+
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+ 
+
+<!-- Edit Modal Window -->
+<div class="modal fade" id="modal-delete-article" >
+    <div class="modal-dialog" role=document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title text-center">Delete Article</h4>
+            </div>
+
+            <!--{{ config('app.app_host_name')}}/article-->
+            <form action="{{route('article.destroy','do')}}" method="post" id="article-update-form">
+                    {{ method_field('delete') }}
+                    {{ csrf_field() }}
+
+                <div class="modal-body">
+                    
+                    <p class="text-center">
+                        Are you sure you want to delete this Article?
+                    </p>
+
+                    <input  type="hidden"  name="id" id="article_id" value="">
+                         
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">No, Cancel</button>
+                    <button type="submit" class="btn btn-warning">Yes, Delete</button>
                 </div>
                     
             </form>             

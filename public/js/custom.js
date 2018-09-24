@@ -18,6 +18,18 @@ $('#modal-edit-article').on('show.bs.modal', function (event) {
      
 }) 
 
+$('#modal-delete-article').on('show.bs.modal', function (event) {
+    
+    var button = $(event.relatedTarget) 
+    var id = button.data('article-id')     
+  
+    
+    var modal = $(this)
+
+    modal.find('.modal-body #article_id').val(id)  
+     
+})
+
 
 
 $('#modal-edit-category').on('show.bs.modal', function (event) {
@@ -41,3 +53,4 @@ $('#modal-edit-category').on('show.bs.modal', function (event) {
     //console.log(act);
      
 }) 
+

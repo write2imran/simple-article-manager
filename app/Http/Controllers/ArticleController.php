@@ -87,8 +87,11 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+       $article = \App\Article::findOrFail($request->id);
+       $article->delete();
+        
+       return back();                
     }
 }
