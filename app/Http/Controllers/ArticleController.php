@@ -38,8 +38,26 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
+        $fileName='';
+
+        if($request->has('imagepath')) {
+            $file = $request->file('imagepath');
+            $fileName = time(). '-'.$file->getClientOriginalName();
+            $file->move(public_path().'/images/', time(). '-'.$file->getClientOriginalName());    
+        }
         
-        \App\Article::create($request->all());
+        $article = new \App\Article;
+        $article->title = $request->get('title');
+        $article->heading = $request->get('heading');
+        $article->detail = $request->get('detail');
+
+        $file = $request->file('imagepath');
+
+        $article->imagepath = $fileName;
+    
+        //dd($file);
+
+        \App\Article::create($article->toArray());
         return back();        
     }
 

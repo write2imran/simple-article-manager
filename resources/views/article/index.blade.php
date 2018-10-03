@@ -53,14 +53,14 @@ All Articles
                 <h4 class="modal-title">New Article</h4>
             </div>
 
-            <form action="{{route('article.store')}}" method="post" id="article-form">
+            <form action="{{route('article.store')}}" method="post" id="article-form" enctype="multipart/form-data">
                     {{ csrf_field() }}
 
                 <div class="modal-body">
 
                         <div class="form-group">
                             <label for="name">Title</label>
-                            <input  type="text" class="form-control" name="title" id="title">
+                            <input  type="text" class="form-control" name="title" id="title" >
                         </div>     
 
                         <div class="form-group">
@@ -68,12 +68,20 @@ All Articles
                             <textarea  class="form-control" name="heading" id="heading" cols=30 rows=4>
                             </textarea>
                         </div>                           
+
+
                     
                         <div class="form-group">
                             <label for="description">Detail</label>
                             <textarea  class="form-control" name="detail" id="detail" cols=30 rows=12>
                             </textarea>
                         </div>                           
+
+                        <div class="form-group">
+                            <label for="imagepath">Upload Image</label>
+                            <input  type="file" class="form-control" name="imagepath" id="imagepath">
+                            
+                        </div>                            
 
                 </div>
 
@@ -153,7 +161,7 @@ All Articles
 <!-- /.modal -->
  
 
-<!-- Edit Modal Window -->
+<!-- Delete Modal Window -->
 <div class="modal fade" id="modal-delete-article" >
     <div class="modal-dialog" role=document">
         <div class="modal-content">

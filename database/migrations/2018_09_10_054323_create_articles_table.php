@@ -17,9 +17,10 @@ class CreateArticlesTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->mediumText('heading');
+            $table->string('imagepath')->nullable();
             $table->mediumText('detail');
             $table->timestamps();
-        });
+        });  
     }
 
     /**
